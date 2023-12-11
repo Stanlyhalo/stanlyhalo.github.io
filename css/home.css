@@ -1,0 +1,226 @@
+body {
+  background-color: rgb(50,50,50);
+}
+#body-padding {
+  position: relative;
+  width: 10px;
+  margin-top: 220px;
+}
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgba(255,255,255,0.05); 
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.5);
+  border-radius: 2.5px;
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255,255,255,1); 
+}
+
+#top {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100px;
+  background-color: #248DEE;
+  overflow: hidden;
+}
+#top-dc {
+  position: absolute;
+  left: 0;
+  top: -17.5px;
+  color: #22629E;
+  text-align: left;
+  font-size: 75px;
+  font-weight: 600;
+  font-family: 'Metropolis',sans-serif;
+}
+#top-pfp {
+  position: absolute;
+  right: 20px;
+  top: 40px;
+  width: 120px;
+  height: 120px;
+  background-image: url("../imgs/davidcogan.jpg");
+  background-position: calc(center - 50%) calc(center - 20%);
+  background-size: 125% auto;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+}
+
+.section-menu {
+  position: relative;
+  top: 200px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 20px;
+  padding: 0;
+  height: 400px;
+  overflow: hidden;
+  background-color: rgb(30,30,30);
+  border: 1px solid rgb(75,75,75);
+  border-radius: 20px;
+  box-shadow: 0 0 0 0 transparent;
+  transition: 0.5s;
+}
+.section-menu:hover {
+  box-shadow: 0 0 5px 0 black;
+}
+.section-header {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 40px;
+  overflow: hidden;
+  background-color: rgb(175,50,50);
+  background-image: url("../imgs/line.png");
+  background-position: 0 0;
+  background-size: auto 150%;
+  box-shadow: 0 0 10px 0 black;
+  filter: saturate(75%);
+  z-index: 5;
+}
+.section-title {
+  position: absolute;
+  left: -20px;
+  top: -5px;
+  color: white;
+  text-shadow: 0 0 10px black;
+  text-indent: 50px;
+  font-size: 20px;
+  font-weight: 400;
+  font-family: 'Metropolis',sans-serif;
+  z-index: 6;
+}
+.section-bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  background-color: rgb(40,40,40);
+  box-shadow: 0 0 10px 0 black;
+}
+.section-contents-cell {
+  position: absolute;
+  left: 0;
+  top: 40px;
+  width: 50%;
+  height: calc(100% - 40px);
+}
+.section-contents-cell-right {
+  left: 50%;
+}
+@media only screen and (max-width: 1000px) {
+  .section-menu {
+    height: 800px;
+  }
+  .section-bg {
+    width: 100%;
+    height: calc(50% + 20px);
+  }
+  .section-contents-cell {
+    width: 100%;
+    height: calc(50% - 20px);
+  }
+  .section-contents-cell-right {
+    left: 0;
+    top: calc(50% + 20px);
+  }
+}
+.section-contents-title {
+  position: absolute;
+  top: 10px;
+  color: #CBCBCB;
+  text-indent: 50px;
+  font-size: 18px;
+  font-weight: 400;
+  font-family: 'Metropolis',sans-serif;
+}
+.section-contents-paragraph {
+  position: absolute;
+  left: 10px;
+  top: 40px;
+  width: calc(100% - 20px);
+  height: calc(100% - 80px);
+  overflow-x: hidden;
+  overflow-y: auto;
+  color: #adadad;
+  word-wrap: break-word;
+  font-size: 15px;
+  font-weight: 400;
+  font-family: 'Metropolis',sans-serif;
+}
+.section-contents-imagesequence {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  height: 60%;
+  cursor: pointer;
+  background-color: rgb(15,15,15);
+  background-position: center center;
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  transform: translateY(-50%);
+}
+.section-contents-imagesequencelabel {
+  position: absolute;
+  left: 0;
+  top: calc(50% + 30%);
+  width: 100%;
+  height: 30px;
+  cursor: default;
+  background-color: transparent;
+  border: none;
+  color: rgba(255,255,255,0.1);
+  word-wrap: break-word;
+  font-size: 15px;
+  font-weight: 400;
+  font-family: 'Metropolis',sans-serif;
+}
+.section-contents-imagesequencebutton {
+  position: absolute;
+  top: 50%;
+  width: 15%;
+  height: 60%;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  color: rgba(255,255,255,1);
+  word-wrap: break-word;
+  font-size: 50px;
+  font-weight: 400;
+  font-family: 'Metropolis',sans-serif;
+  transform: translateY(-50%);
+}
+
+.image-blowup {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  background-color: rgba(25,25,25,0.75);
+  background-position: center center;
+  background-size: auto 80%;
+  background-repeat: no-repeat;
+  box-shadow: 0 0 10px 0 black inset;
+  transition: 0.2s;
+  z-index: 100;
+}
+@media only screen and (max-width: 1300px) {
+  .image-blowup {
+    background-size: auto 50vw;
+  }
+}
